@@ -10,25 +10,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Student {
 
-	@Getter
-	@Setter
 	@Id
 	@GeneratedValue
 	@Column(name = "ID")
 	private Long id;
 
-	@Getter
-	@Setter
 	@Column(name = "NAME")
 	private String name;
 
-	@Getter
-	@Setter
 	@Column(name = "PASSPORT_NUMBER")
 	private String passportNumber;
 }

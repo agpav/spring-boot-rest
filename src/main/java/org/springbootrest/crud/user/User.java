@@ -1,9 +1,11 @@
-package org.springbootrest.crud.article;
+package org.springbootrest.crud.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,18 +15,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@Table(name = "USER")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Article {
+public class User {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "TITLE")
-	private String title;
+	@Column(name = "USER_NAME")
+	private String userName;
 
-	@Column(name = "CATEGORY")
-	private String category;
+	@Column(name = "PASSWORD")
+	private String password;
 }
